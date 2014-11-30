@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>SocialKit Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/css/screen.css" type="text/css" media="screen, projection">
+	<!--[if lt IE 8]>
+        <link rel="stylesheet" href="assets/css/ie.css" type="text/css" media="screen, projection">
+    <![endif]-->
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+        .logo { opacity: 0.75; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;SocialKit&rdquo; Documentation by &ldquo;ThemePhysics&rdquo; v1.2</h3>
+		
+		<hr>
+		
+		<h1 class="center"><img class="logo" src="assets/images/icon.png" alt="Icon" height="36px"> SocialKit</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 22/10/2014<br>
+					By: ThemePhysics<br>
+					Email: <a href="mailto:themarvelkit@gmail.com">themarvelkit@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing SocialKit. If you have any questions that are beyond the scope of this help file, please feel free to contact me using <a href="http://codecanyon.net/item/socialkit-social-networking-platform/8493571/support">this form</a>.</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="number">
+			<li><a href="#preparation">Preparation</a></li>
+			<li><a href="#installation">Installation</a></li>
+			<li><a href="#configurations">Configurations</a></li>
+			<li><a href="#faq">FAQ</a></li>
+			<li><a href="#developers">Developers</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="preparation"><strong>1) Preparation</strong> - <a href="#toc">top</a></h3>
+        
+		<p>Make sure you have the following:</p>
+        
+        <ol class="number">
+            <li>PHP 5.3 or more</li>
+            <li>MySQLi Extension</li>
+            <li>GD Library</li>
+        </ol>
+		
+        
+		<hr>
+
+		<h3 id="installation"><strong>2) Installation</strong> - <a href="#toc">top</a></h3>
+
+		<p>Please follow these steps to setup SocialKit:</p> 
+
+		<ol class="number">
+            <li>
+                Import the <strong>'SocialKit.SQL'</strong> file from the <strong>"MySQL"</strong> folder into your MySQL database using the import function available in MySQL phpMyadmin. Here's a preview of what your MySQL phpMyAdmin might look like and where to find the import function:
+                <br><br>
+                <img src="assets/images/mysql_import_location_preview.png" alt="MySQL Import Location Preview" width="100%">
+            </li>
+            <li>
+                Using a text editor, open the file <strong>'config.php'</strong> located inside the <strong>"Script/assets/includes/"</strong> folder, and replace what's between the brackets (e.g: 'DB_NAME') with your MySQL settings. Here's a preview of the content of 'config.php', replace only the contents marked <strong style="color: #ff0000; text-decoration: underline;">red</strong>:
+                <br><br>
+                <img src="assets/images/installation_config_preview.png" alt="Installation Config Preview">
+                <br><br>
+                For Facebook Login to work, you will need to create an app on Facebook. Watch the video tutorial below on how to implement Facebook Login:
+                <br><br>
+                <iframe src="https://www.youtube.com/embed/qBP8jmuv-GE" width="100%" height="436px"></iframe>
+            </li>
+            <li>Upload the files from the <strong>"Script"</strong> folder on the FTP server (usually <strong>public_html</strong> folder when installing it on a domain).</li>
+            <li>Set the <strong>CHMOD</strong> to 777 or 775 (depending on the server configuration) to the following folders: <strong>'photos'</strong>, <strong>'assets/settings'</strong> and to all the files inside <strong>'assets/settings'</strong> folder.</li>
+        </ol>
+        
+        <hr>
+		
+		<h3 id="configurations"><strong>3) Configurations</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+            Configurations and website management can be controlled using the <strong>admin panel</strong>. The admin panel link is labeled <strong>'Admin'</strong> and is located in the footer section of every page. The default login username for admin is '<strong>marvelkit</strong>' and the default login password is '<strong>marvel123</strong>'. You can change login informations after logging in.
+        </p>
+		
+        <p>Short summary of admin panel features:</p>
+        
+        <ul class="bullet">
+            <li>
+                <strong>General Settings</strong><br>
+                <small>Allows you to edit website settings and informations.</small>
+            </li>
+            <br>
+            
+            <li>
+                <strong>User Settings</strong><br>
+                <small>Allows you to change predefined settings about users and features to be enabled or disabled.</small>
+            </li>
+            <br>
+            
+            <li>
+                <strong>Page Settings</strong><br>
+                <small>Allows you to change predefined settings about pages and features to be enabled or disabled.</small>
+            </li>
+            <br>
+            
+            <li>
+                <strong>Group Settings</strong><br>
+                <small>Allows you to change predefined settings about groups and features to be enabled or disabled.</small>
+            </li>
+            <br>
+            
+            <li>
+                <strong>Announcements</strong><br>
+                <small>Allows you to announce news or informations to your Users.</small>
+            </li>
+            <br>
+
+            <li>
+                <strong>Themes</strong><br>
+                <small>Allows you to change the whole website layout, the current theme enabled will have a highlighted button showing Actived.</small>
+            </li>
+            <br>
+            
+            <li>
+                <strong>Statistics</strong><br>
+                <small>Advanced user and site statistics (User Registered, Pages Created, Groups Created, Comments, Reports, Likes, etc).</small>
+            </li>
+            <br>
+            
+            <li>
+                <strong>Manage User</strong><br>
+                <small>Allows you to edit users (or a certain user), verify them, update user settings and informations or delete them.</small>
+            </li>
+            <br>
+            
+            <li>
+                <strong>Manage Pages</strong><br>
+                <small>Allows you to edit pages (or a certain page), verify them, update page settings and informations or delete them.</small>
+            </li>
+            <br>
+            
+            <li>
+                <strong>Manage Groups</strong><br>
+                <small>Allows you to edit groups (or a certain group), update group settings and informations or delete them.</small>
+            </li>
+            <br>
+            
+            <li>
+                <strong>Manage Reports</strong><br>
+                <small>Allows you to change predefined settings about users and features to be enabled or disabled.</small>
+            </li>
+            <br>
+            
+            <li>
+                <strong>Manage Ads</strong><br>
+                <small>Allows you to add advertisements in certain places on the website.</small>
+            </li>
+            <br>
+            
+            <li>
+                <strong>Manage Admin Login</strong><br>
+                <small>Update your admin login username and password.</small>
+            </li>
+            <br>
+            
+            <li>
+                <strong>Log Out</strong><br>
+                <small>Logs you out of the admin panel.</small>
+            </li>
+        </ul>
+        
+		<hr>
+		
+		<h3 id="faq"><strong>4) FAQ</strong> - <a href="#toc">top</a></h3>
+		
+		<ol class="number">
+            <li>
+                <strong>Q:</strong> I want to modify a text or something about the design...<br>
+                <strong>A:</strong> You can change anything visual from the theme located in: /themes/current-theme-name. PHP knowledge may require.
+            </li>
+            <br>
+            
+            <li>
+                <strong>Q:</strong> I want to add a new language to the script.<br>
+                <strong>A:</strong> Make a copy of the original 'english.php' file into the 'assets/languages' folder, rename it into your language and then translate it.
+            </li>
+            <br>
+            
+            <li>
+                <strong>Q:</strong> I want to change the content of the Privacy Policy, Contact, Disclaimer and/or TOS page.<br>
+                <strong>A:</strong> Open assets/sources/terms.php and edit the texts with your own terms, save and upload, done!
+            </li>
+            <br>
+            
+            <li>
+                <strong>Q:</strong> I have problems/questions related to the script, how can I contact you?<br>
+                <strong>A:</strong> You can e-mail me using the contact form here: <a href="http://codecanyon.net/item/socialkit-social-networking-platform/8493571/support">http://codecanyon.net/item/socialkit-social-networking-platform/8493571/support</a>
+            </li>
+        </ol>
+		
+		<hr>
+		
+		<h3 id="developers"><strong>5) Developers</strong> - <a href="#toc">top</a></h3>
+		
+		<p>As a developer, the only mandatory requirement is a valid SocialKit license key.</p>
+        
+        <h3>Themes</h3>
+		
+        <p><strong>The theme folder must contain the following:</strong></p>
+        
+        <ul class="bullet">
+            <li>info.php [contains theme informations such as author, version, etc]</li>
+            <li>icon.png [Theme's icon]</li>
+            <li>the rest of the required theme files are located in the default theme called <strong>'grape'</strong>.</li>
+        </ul>
+        
+        <p><strong>Recommendations:</strong></p>
+        
+        <ul class="bullet">
+            <li>Theme folder should not contain any white spaces</li>
+            <li>Make a copy of the original <strong>'grape'</strong> theme and edit it, as it contains all the files required.</li>
+        </ul>
+        
+		<hr>
+		
+        <p>
+            Copyright © 2014 <a href="http://socialkit.net">SocialKit</a>. All rights reserved.
+            <br>
+            By <a href="http://codecanyon.net/user/ThemePhysics">ThemePhysics</a>.
+        </p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

@@ -1,0 +1,12 @@
+- Added Friends System
+- Added Announcement feature
+- Added Photo Album
+- Added Lightbox
+- Added Post Privacy
+- Everything has been Ajaxified
+- Added option to add Birthday, Location, Hometown, About in registration form
+- Added option to limit characters to Posts, Comments and Messages
+- Various bug fixes
+and much more! 
+
+Happy Update :)

@@ -1,0 +1,1 @@
+- Bug fixes in Post, Albums, Languages, privacy, hashtags and etc.

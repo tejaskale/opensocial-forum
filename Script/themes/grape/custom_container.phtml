@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+    <script src="js/home.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+
+    <title>Wed Up</title>
+
+     <link href="<?php echo $sk['config']['theme_url']; ?>/css/style.css" rel="stylesheet">
+     <link href="<?php echo $sk['config']['theme_url']; ?>/css/style-1.1.css" rel="stylesheet">
+     <link href="<?php echo $sk['config']['theme_url']; ?>/css/style-1.2.css" rel="stylesheet">
+
+
+     <script src="<?php echo $sk['config']['theme_url']; ?>/javascript/jquery.1.10.2.min.js"></script>
+    <script src="<?php echo $sk['config']['theme_url']; ?>/javascript/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="<?php echo $sk['config']['theme_url']; ?>/javascript/jquery.ui.touch-punch.min.js"></script>
+    <script src="<?php echo $sk['config']['theme_url']; ?>/javascript/jquery-timeago.js"></script>
+    <script src="<?php echo $sk['config']['theme_url']; ?>/javascript/jquery.form.min.js"></script>
+
+    <?php
+    if ($sk['config']['smooth_links'] == 1) {
+        echo '<script>
+    function SK_source(){
+        return \'' . $sk['config']['ajax_path'] . '\';
+    }
+    function SK_pageSource() {
+        return \'' . $sk['config']['page_path'] . '\';
+    }
+</script>';
+    } else {
+        echo '<script>
+    function SK_source(){
+        return \'request.php\';
+    }
+    function SK_pageSource() {
+        return \'page.php\';
+    }
+</script>';
+    }
+       if ($sk['logged'] == true) {
+    ?>
+    <script src="<?php echo $sk['config']['theme_url']; ?>/javascript/script.js"></script>
+    <?php
+    } else {
+    ?>
+    <script src="<?php echo $sk['config']['theme_url']; ?>/javascript/welcome.js"></script>
+</head>
+
+<body>
+
+   <!--  <div id="header" data-role="header" data-position="fixed" data-theme="b">
+        <h1>Wed Up</h1>
+    </div> -->
+   <div data-role="page" id="pageone">
+   <div data-role="header">
+    <h1>Forums</h1>
+   </div>
+    <div id="content" data-role="content">
+         <?php echo $sk['content']; ?>
+    </div>  
+
+    <div id="footer" data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="user" data-theme="b">Forum</a></li>
+                <li><a href="#" data-icon="camera" data-theme="b">Photographers</a></li>
+                <li><a href="#" data-icon="home" data-theme="b">Wedding Halls</a></li>
+                <li><a href="#" data-icon="audio" data-theme="b">DJs</a></li>
+                <li><a href="#" data-icon="bars" data-theme="b">Settings</a></li>
+            </ul>
+        </div>
+        <!-- /navbar -->
+    </div>
+    <!-- /footer -->
+
+    <!--   <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script> -->
+    <script src="http://wedup.net/mobileApp/getImages.php"></script>
+</body>
+
+</html>
