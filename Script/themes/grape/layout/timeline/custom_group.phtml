@@ -19,7 +19,13 @@
         .footer-wrapper{
             display: none !important;
         }
+        .float-clear{
+        	display:none !important;
+        }
     </style>
+    <script type="text/javascript"> 
+  		var grpId='<?php if ($sk['logged'] == true) {echo $sk['timeline']['id'];}else {echo -1;}?>';
+    </script>
     <div class="timeline-370" style="margin-top: 1%;">
         <?php
         if (isset($_GET['tab2']) && $_GET['tab2'] == "add_members") {
